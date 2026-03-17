@@ -89,7 +89,7 @@ const getAdmin = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(400).send({
-      message: "Login Admin failed",
+      message: "Login Admin failed" + error,
     });
   }
 };
