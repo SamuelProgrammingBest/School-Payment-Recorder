@@ -145,7 +145,7 @@ const getDashboard = async (req, res) => {
     // Fees expected to be paid
     const moneyRem = payments.map((payment) => payment.balance);
 
-    const moneyRemSum = unpaid.reduce((acc, currentValue) => {
+    const moneyRemSum = moneyRem.reduce((acc, currentValue) => {
       acc + currentValue;
     }, 0);
 
