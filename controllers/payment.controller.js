@@ -116,7 +116,6 @@ const getDashboard = async (req, res) => {
 
     const countPartial = await paymentsDB
       .countDocuments({ createdBy: id, status: "Partial" })
-      .populate("student");
 
     const payments = await paymentsDB
       .find({ createdBy: id })
@@ -156,6 +155,9 @@ const getDashboard = async (req, res) => {
         paidStudents: countPaid,
         unpaidStudents: countUnpaid,
         partialStudents: countPartial,
+        balances,
+        revenue,
+        moneyRem
         totalFeesCollected: totalFees,
         totalRevenueExpected: revenueExpected,
         totalRevenueRemaining:moneyRemSum
