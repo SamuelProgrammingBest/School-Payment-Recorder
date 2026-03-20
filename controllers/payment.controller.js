@@ -158,9 +158,9 @@ const getDashboard = async (req, res) => {
         balances,
         revenue,
         moneyRem,
-        totalFeesCollected: totalFees,
-        totalRevenueExpected: revenueExpected,
-        totalRevenueRemaining:moneyRemSum
+        totalFees,
+        revenueExpected,
+        moneyRemSum
       },
     });
   } catch (error) {
