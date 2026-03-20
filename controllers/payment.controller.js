@@ -157,7 +157,7 @@ const getDashboard = async (req, res) => {
         partialStudents: countPartial,
         balances,
         revenue,
-        moneyRem
+        moneyRem,
         totalFeesCollected: totalFees,
         totalRevenueExpected: revenueExpected,
         totalRevenueRemaining:moneyRemSum
