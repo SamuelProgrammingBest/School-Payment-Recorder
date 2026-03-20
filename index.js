@@ -1,8 +1,13 @@
 const express = require("express");
+const cors = require("cors")
 const rateLimit = require("express-rate-limit");
 
 const app = express();
 app.use(express.json());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}))
 
 const dotenv = require("dotenv");
 const { connectMyDB } = require("./config/db.connect");
