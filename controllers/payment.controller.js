@@ -165,7 +165,7 @@ const getDashboard = async (req, res) => {
     console.log(error);
 
     res.status(400).send({
-      message: "Payment and student not gotten",
+      message: "Payment and student not gotten" + error,
     });
   }
 };
