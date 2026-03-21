@@ -132,6 +132,7 @@ const getDashboard = async (req, res) => {
 
     const totalFees = balances.reduce((acc, currentValue) => {
       acc + currentValue;
+      return acc
     }, 0);
 
     // Fees expected to be paid
@@ -139,6 +140,7 @@ const getDashboard = async (req, res) => {
 
     const revenueExpected = revenue.reduce((acc, currentValue) => {
       acc + currentValue;
+      return acc
     }, 0);
 
     // Fees expected to be paid
@@ -146,6 +148,7 @@ const getDashboard = async (req, res) => {
 
     const moneyRemSum = moneyRem.reduce((acc, currentValue) => {
       acc + currentValue;
+      return acc
     }, 0);
 
     res.status(200).send({
@@ -155,9 +158,6 @@ const getDashboard = async (req, res) => {
         paidStudents: countPaid,
         unpaidStudents: countUnpaid,
         partialStudents: countPartial,
-        balances,
-        revenue,
-        moneyRem,
         totalFees,
         revenueExpected,
         moneyRemSum
