@@ -131,7 +131,7 @@ const getDashboard = async (req, res) => {
     const balances = payments.map((payment) => payment.feesPaid);
 
     const totalFees = balances.reduce((acc, currentValue) => {
-      acc + currentValue;
+      acc += currentValue;
       return acc
     }, 0);
 
@@ -139,7 +139,7 @@ const getDashboard = async (req, res) => {
     const revenue = payments.map((payment) => payment.totalFees);
 
     const revenueExpected = revenue.reduce((acc, currentValue) => {
-      acc + currentValue;
+      acc += currentValue;
       return acc
     }, 0);
 
@@ -147,7 +147,7 @@ const getDashboard = async (req, res) => {
     const moneyRem = payments.map((payment) => payment.balance);
 
     const moneyRemSum = moneyRem.reduce((acc, currentValue) => {
-      acc + currentValue;
+      acc += currentValue;
       return acc
     }, 0);
 
