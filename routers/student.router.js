@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post("/createStudent", verifyAdmin,  createStudent)
 router.get("/getStudents", verifyAdmin, getAllStudents)
-router.post("/getStudent/:_id", verifyAdmin, getOneStudent)
+router.get("/getStudent/:_id", verifyAdmin, getOneStudent)
 router.post("/filterStudents", verifyAdmin, filterByName)
 router.get("/filterClass", verifyAdmin, filterByClass)
 router.get("/filterName", verifyAdmin, filterByName)
