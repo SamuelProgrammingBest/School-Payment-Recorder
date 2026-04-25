@@ -120,7 +120,7 @@ const getDashboard = async (req, res) => {
     const payments = await paymentsDB
       .find({ createdBy: id })
       .populate("student")
-      .sort({createdAt:id})
+      .sort({createdAt:-1})
 
     if (!payments) {
       return res.status(404).send({
