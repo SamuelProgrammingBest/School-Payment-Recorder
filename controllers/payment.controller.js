@@ -160,7 +160,8 @@ const getDashboard = async (req, res) => {
         partialStudents: countPartial,
         totalFees,
         revenueExpected,
-        moneyRemSum
+        moneyRemSum,
+        payments
       },
     });
   } catch (error) {
